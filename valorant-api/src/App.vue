@@ -15,7 +15,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <RouterView />
   </main>
 
-  <footer class="w-100 h-50 d-flex align-items-center justify-content-center bg-dark">
+  <footer class="w-100 h-50 d-flex align-items-center justify-content-around bg-dark">
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-5">
