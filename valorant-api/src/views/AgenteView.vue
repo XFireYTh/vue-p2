@@ -1,28 +1,29 @@
-<script>
-import AgentesCards from '@/components/AgentesCards.vue'
+<script lang="ts">
+import DetalheAgente from '@/components/DetalheAgente.vue';
+
 
 export default {
-  name: 'AgenteView',
+  name: 'ArmasView',
   components: {
-    AgentesCards
+    DetalheAgente,
   },
 }
 </script>
 
 <template>
-
-<div class="w-100 d-flex flex-column align-items-center justify-content-center" id="fundo">
-    <div class="text-center container mt-2">
-        <h1 class="display-3 text-white">Agentes</h1>
-        <p class="text-white pt-3 fs-5">Veja tudo sobre os agentes do Valorant</p>
+  <div class="w-100 pt-3 pb-3 d-flex flex-column align-items-center">
+    <div class="container">
+        <div class="row">
+            <p class="display-4 text-white col-lg-8">Detalhes</p>   
+            <div class="col-lg-4 d-flex justify-content-end align-items-center">
+                <a href="/agentes" class="btn btn-outline-light">Voltar</a>
+            </div>
+            
+        </div>
+       
     </div>
-
-    <AgentesCards />
-
-</div>
-
+  </div>
+  <DetalheAgente/>
 </template>
 
-<style>
-
-</style>
+<style></style>

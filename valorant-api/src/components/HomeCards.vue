@@ -13,42 +13,42 @@ export default {
     }
   },
   methods: {
-    imgAgentGet(uuid = null) {
+    async imgAgentGet(uuid = null) {
       let url = `https://valorant-api.com/v1/agents?language=pt-BR`
 
       if (uuid != null) {
         url = `https://valorant-api.com/v1/agents/${uuid}?language=pt-BR`
       }
 
-      api.get(url).then((res) => {
+      await api.get(url).then((res) => {
         if (res.status == 200) {
           this.cards[0].img = res.data.data.displayIcon
         }
       })
     },
 
-    imgWeaponGet(uuid = null) {
+    async imgWeaponGet(uuid = null) {
       let url = `https://valorant-api.com/v1/weapons/skins?language=pt-BR`
 
       if (uuid != null) {
         url = `https://valorant-api.com/v1/weapons/skins/${uuid}?language=pt-BR`
       }
 
-      api.get(url).then((res) => {
+      await api.get(url).then((res) => {
         if (res.status == 200) {
           this.cards[1].img = res.data.data.displayIcon
         }
       })
     },
 
-    imgMapGet(uuid = null) {
+    async imgMapGet(uuid = null) {
       let url = `https://valorant-api.com/v1/maps?language=pt-BR`
 
       if (uuid != null) {
         url = `https://valorant-api.com/v1/maps/${uuid}?language=pt-BR`
       }
 
-      api.get(url).then((res) => {
+      await api.get(url).then((res) => {
         if (res.status == 200) {
           this.cards[2].img = res.data.data.splash
         }
@@ -65,23 +65,24 @@ export default {
 </script>
 
 <template>
-  <div
-    class="card border rounded border-dark col-md-3 m-2"
-    v-for="(card, index) in cards"
-    :key="index"
-    style="background-color: #151515"
-  >
-    <div class="card-header">
-      <p class="text-white text-center mt-2 fw-bold">{{ card.titulo }}</p>
-    </div>
-    <div class="card-img-top w-100 h-50 d-flex justify-content-center align-items-center back-img-val">
-      <img :src="card.img" alt="img-card" class="card-img-top h-100" />
-    </div>
-    <div class="card-body">
-      <p class="card-text text-white mt-1">{{ card.desc }}</p>
-      <a :href="'/' + card.titulo.toLowerCase()" class="btn btn-outline-light text-center w-100">Ver mais</a>
+  <div class="container">
+    <div class="row d-flex justify-content-center gap-3">
+      <div class="card border rounded border-dark col-md-3 m-2" v-for="(card, index) in cards" :key="index" style="background-color: #151515">
+          <div class="card-header">
+            <p class="text-white text-center mt-2 fw-bold">{{ card.titulo }}</p>
+          </div>
+          <div class="card-img-top w-100 h-50 d-flex justify-content-center align-items-center back-img-val">
+            <img :src="card.img" alt="img-card" class="card-img-top h-100" />
+          </div>
+          <div class="card-body">
+            <p class="card-text text-white mt-1">{{ card.desc }}</p>
+            <a :href="'/' + card.titulo.toLowerCase()" class="btn btn-outline-light text-center w-100">Ver mais</a>
+        </div>
+      </div>
     </div>
   </div>
+  
+  
 </template>
 
 <style>
