@@ -6,7 +6,7 @@ import HomeCards from '@/components/HomeCards.vue'
   <div class="w-100 h-100" id="fundo">
     <div class="container pt-3 text-white">
       <div class="col-12 text-center">
-        <h1 class="display-3">Boas vindas a Valolant!</h1>
+        <h1 class="display-3">Boas vindas a Valorant!</h1>
         <h3>Descubra tudo que o jogo tem a oferecer para você</h3>
       </div>
     </div>

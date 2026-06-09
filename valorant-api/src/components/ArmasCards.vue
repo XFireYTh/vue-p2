@@ -13,7 +13,6 @@ export default {
       const url = '/weapons?language=pt-BR'
       await api.get(url).then((res) => {
         const guns = res.data.data
-        console.log(guns)
         guns.forEach((gun) => {
           this.armas.push({
             id: gun.uuid,

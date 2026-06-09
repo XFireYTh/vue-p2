@@ -14,6 +14,7 @@ export default {
     <div class="text-center container mt-2">
       <h1 class="display-3 text-white">Agentes</h1>
       <p class="text-white pt-3 fs-5">Veja tudo sobre os agentes do Valorant</p>
+      <a href="/" class="btn mt-2 mb-2 btn-outline-danger border-0">Voltar</a>
     </div>
 
     <AgentesCards />

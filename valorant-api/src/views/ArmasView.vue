@@ -16,6 +16,11 @@ export default {
     </div>
   </div>
   <ArmasCards />
+  <div class="w-100">
+    <div class="container d-flex justify-content-center mt-3">
+      <a href="/" class="btn btn-outline-danger border-0">Voltar</a>
+    </div>
+  </div>
 </template>
 
 <style></style>

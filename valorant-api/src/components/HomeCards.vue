@@ -7,7 +7,7 @@ export default {
     return {
       cards: [
         { titulo: 'Agentes', desc: 'Veja informações sobre os agentes do jogo', img: '' },
-        { titulo: 'Armas', desc: 'Saiba mais sobre o arsenal distribuído pelo jogo', img: '' },
+        { titulo: 'Armas', desc: 'Conheça o arsenal completo e as estatísticas das armas', img: '@/components/img/vandalDead.png' },
         { titulo: 'Mapas', desc: 'Descubra os mapas e suas características', img: '' },
       ],
     }
@@ -50,7 +50,7 @@ export default {
 
       await api.get(url).then((res) => {
         if (res.status == 200) {
-          this.cards[2].img = res.data.data.splash
+          this.cards[2].img = res.data.data.displayIcon
         }
       })
     },
@@ -79,10 +79,10 @@ export default {
         <div
           class="card-img-top w-100 h-50 d-flex justify-content-center align-items-center back-img-val"
         >
-          <img :src="card.img" alt="img-card" class="card-img-top h-100" />
+          <img :src="card.img" alt="img-card" class="card-img-top mh-100 mw-100 object-fit-contain" />
         </div>
         <div class="card-body">
-          <p class="card-text text-white mt-1">{{ card.desc }}</p>
+          <p class="card-text text-white mt-1 text-center">{{ card.desc }}</p>
           <a :href="'/' + card.titulo.toLowerCase()" class="btn btn-outline-light text-center w-100"
             >Ver mais</a
           >
