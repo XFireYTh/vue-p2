@@ -1,11 +1,11 @@
 <script>
-import ArmasCards from '@/components/ArmasCards.vue';
+import ArmasCards from '@/components/ArmasCards.vue'
 
 export default {
   name: 'ArmasView',
   components: {
     ArmasCards,
-  }
+  },
 }
 </script>
 
@@ -15,7 +15,7 @@ export default {
       <p class="display-2 text-white">Armas</p>
     </div>
   </div>
-  <ArmasCards/>
+  <ArmasCards />
 </template>
 
 <style></style>

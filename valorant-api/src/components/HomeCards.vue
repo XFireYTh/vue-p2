@@ -67,22 +67,29 @@ export default {
 <template>
   <div class="container">
     <div class="row d-flex justify-content-center gap-3">
-      <div class="card border rounded border-dark col-md-3 m-2" v-for="(card, index) in cards" :key="index" style="background-color: #151515">
-          <div class="card-header">
-            <p class="text-white text-center mt-2 fw-bold">{{ card.titulo }}</p>
-          </div>
-          <div class="card-img-top w-100 h-50 d-flex justify-content-center align-items-center back-img-val">
-            <img :src="card.img" alt="img-card" class="card-img-top h-100" />
-          </div>
-          <div class="card-body">
-            <p class="card-text text-white mt-1">{{ card.desc }}</p>
-            <a :href="'/' + card.titulo.toLowerCase()" class="btn btn-outline-light text-center w-100">Ver mais</a>
+      <div
+        class="card border rounded border-dark col-md-3 m-2"
+        v-for="(card, index) in cards"
+        :key="index"
+        style="background-color: #151515"
+      >
+        <div class="card-header">
+          <p class="text-white text-center mt-2 fw-bold">{{ card.titulo }}</p>
+        </div>
+        <div
+          class="card-img-top w-100 h-50 d-flex justify-content-center align-items-center back-img-val"
+        >
+          <img :src="card.img" alt="img-card" class="card-img-top h-100" />
+        </div>
+        <div class="card-body">
+          <p class="card-text text-white mt-1">{{ card.desc }}</p>
+          <a :href="'/' + card.titulo.toLowerCase()" class="btn btn-outline-light text-center w-100"
+            >Ver mais</a
+          >
         </div>
       </div>
     </div>
   </div>
-  
-  
 </template>
 
 <style>

@@ -15,9 +15,9 @@ import { RouterLink, RouterView } from 'vue-router'
     <RouterView />
   </main>
 
-  <footer class="w-100 h-50 d-flex align-items-center justify-content-around bg-dark">
+  <footer class="w-100 d-flex align-items-center justify-content-around bg-dark">
     <div class="container">
-      <div class="row">
+      <div class="row d-flex align-items-center justify-content-between">
         <div class="col-sm-12 col-md-5">
           <p class="display-4 text-light text-center">Valorant Info</p>
           <p class="text-light text-center">
@@ -25,7 +25,7 @@ import { RouterLink, RouterView } from 'vue-router'
           </p>
         </div>
 
-        <div class="col-1 d-sm-none d-md-inline">
+        <div class="col-1 d-sm-none d-md-inline" id="bar_foot">
           <div class="d-flex h-100 align-items-center justify-content-center">
             <div class="border border-light h-100"></div>
           </div>
@@ -36,7 +36,7 @@ import { RouterLink, RouterView } from 'vue-router'
             <p class="col-4 text-white text-center">
               Todo conteúdo aqui utilizado é provido pela Valorant API
             </p>
-            <a href="https://valorant-api.com/" class="col-sm-12 col-md-4">
+            <a href="https://valorant-api.com/" class="col-sm-12 col-md-4" target="_blank">
               <img src="./components/img/logo_transparent.png" alt="ValoApi Logo" id="valApiLogo" />
             </a>
           </div>
@@ -62,10 +62,14 @@ footer {
   min-height: 20vh;
 }
 #valApiLogo {
-  width: 4vw;
+  width: 6vw;
 }
 
 .bg-valDark {
   background-color: #151515;
+}
+
+#bar_foot {
+  height: 15vh;
 }
 </style>

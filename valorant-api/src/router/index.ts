@@ -4,6 +4,7 @@ import AgentesView from '@/views/AgentesView.vue'
 import AgenteView from '@/views/AgenteView.vue'
 import MapaView from '@/views/MapaView.vue'
 import ArmasView from '../views/ArmasView.vue'
+import DetalheArmaView from '@/views/DetalheArmaView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/armas',
       name: 'armas',
       component: ArmasView,
+    },
+    {
+      path: '/detalhearma',
+      name: 'armaDetalhe',
+      component: DetalheArmaView,
     },
     {
       path: '/about',
