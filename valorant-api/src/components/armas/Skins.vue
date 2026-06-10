@@ -34,7 +34,7 @@ export default {
 </script>
 
 <template>
-  <div class="row mt-3">
+  <div class="row mt-3 me-2">
     <div class="col-12">
       <select
         name="skin"

@@ -78,14 +78,17 @@ export default {
     <div v-if="dadosArma.adsStats" class="row w-100">
       <div class="col-12 row d-flex align-items-center justify-content-between">
         <p class="text-white fw-bold col-8">Status da Mira(ADS):</p>
-        <button
-          type="button"
-          class="btn btn-outline-light btn-sm border-0 col-2"
-          data-bs-toggle="collapse"
-          data-bs-target="#detalhesADS"
-        >
-          Exibir
-        </button>
+        <div class="col-4 d-flex justify-content-center align-items-center">
+          <button
+            type="button"
+            class="btn btn-outline-light btn-sm border-0 "
+            data-bs-toggle="collapse"
+            data-bs-target="#detalhesADS"
+          >
+            Exibir
+          </button>
+        </div>
+
       </div>
       <div class="ps-4 pb-2 collapse" id="detalhesADS">
         <p class="text-white fw-light">
@@ -112,14 +115,17 @@ export default {
     <div v-if="dadosArma.altShotgunStats" class="row">
       <div class="col-12 row d-flex align-items-center justify-content-between">
         <p class="text-white fw-bold col-8">Estatisticas Alternativas de Espingarda:</p>
-        <button
-          type="button"
-          class="btn btn-outline-light btn-sm border-0 col-2"
-          data-bs-toggle="collapse"
-          data-bs-target="#detalhesSAD"
-        >
-          Exibir
-        </button>
+        <div class="col-4 d-flex justify-content-center align-items-center">
+          <button
+            type="button"
+            class="btn btn-outline-light btn-sm border-0 "
+            data-bs-toggle="collapse"
+            data-bs-target="#detalhesSAD"
+          >
+            Exibir
+          </button>
+        </div>
+
       </div>
       <div class="ps-5 pb-2 collapse" id="detalhesSAD">
         <p class="text-white fw-light">
@@ -137,14 +143,17 @@ export default {
     <div v-if="dadosArma.airBurstStats">
       <div class="col-12 row d-flex align-items-center justify-content-between">
         <p class="text-white fw-bold col-8">Estatísticas de Rajada:</p>
-        <button
-          type="button"
-          class="btn btn-outline-light btn-sm border-0 col-2"
-          data-bs-toggle="collapse"
-          data-bs-target="#detalhesBurst"
-        >
-          Exibir
-        </button>
+        <div class="col-4 d-flex justify-content-center align-items-center">
+          <button
+            type="button"
+            class="btn btn-outline-light btn-sm border-0 "
+            data-bs-toggle="collapse"
+            data-bs-target="#detalhesBurst"
+          >
+            Exibir
+          </button>
+        </div>
+
       </div>
       <div class="ps-5 collapse" id="detalhesBurst">
         <p class="text-white fw-light">
@@ -162,14 +171,17 @@ export default {
     <div v-if="dadosArma.damageRanges" class="row w-100">
       <div class="col-12 row d-flex align-items-center justify-content-between">
         <p class="text-white fw-bold col-8">Estatísticas de Distância:</p>
-        <button
-          type="button"
-          class="btn btn-outline-light btn-sm border-0 col-2"
-          data-bs-toggle="collapse"
-          data-bs-target="#detalhesDist"
-        >
-          Exibir
-        </button>
+        <div class="col-4 d-flex justify-content-center align-items-center">
+          <button
+            type="button"
+            class="btn btn-outline-light btn-sm border-0"
+            data-bs-toggle="collapse"
+            data-bs-target="#detalhesDist"
+          >
+            Exibir
+          </button>
+        </div>
+
       </div>
       <div class="ps-5 collapse" id="detalhesDist">
         <div v-for="(item, index) in dadosArma.damageRanges" :key="index">

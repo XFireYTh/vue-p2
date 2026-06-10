@@ -39,7 +39,6 @@ export default {
   },
   beforeMount() {
     this.infoGet()
-    console.log(this.dataAgente)
   },
 }
 </script>

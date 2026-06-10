@@ -34,7 +34,6 @@ export default {
       const url = `/weapons/${this.uuid}?language=pt-BR`
       await api.get(url).then((res) => {
         const arma = res.data.data
-        console.log(arma)
         this.dadosArma = {
           nome: arma.displayName,
           img: arma.displayIcon,
@@ -49,7 +48,6 @@ export default {
         this.statusArma = arma.weaponStats
         this.statusLoja = arma.shopData || ''
 
-        console.log(this.dadosArma)
       })
     },
 
@@ -94,7 +92,7 @@ export default {
         </div>
 
         <!-- Parte dos detalhes -->
-        <div class="col-md-12 col-lg-8 p-0 d-flex">
+        <div class="col-md-12 col-lg-8 p-0 d-flex bg-dark rounded">
           <div
             class="col-lg-2 row-md d-flex flex-lg-column align-items-center justify-content-center pt-4 pb-4 gap-3 p-2 h-100"
           >
