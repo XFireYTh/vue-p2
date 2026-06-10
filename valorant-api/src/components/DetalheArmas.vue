@@ -1,6 +1,7 @@
 <script lang="ts">
 import api from '@/services/api'
 import StatusArma from '@/components/armas/Status.vue'
+import SkinsArma from './armas/Skins.vue'
 
 export default {
   name: 'DetalheArmas',
@@ -17,6 +18,7 @@ export default {
   },
   components: {
     StatusArma,
+    SkinsArma,
   },
   methods: {
     uuidGet() {
@@ -72,7 +74,9 @@ export default {
   <div class="w-100 d-flex flex-column justify-content-center align-items-center">
     <div class="container rounded" v-if="dadosArma.nome">
       <div class="row d-flex justify-content-around">
-        <div class="col-md-12 col-lg-4 d-flex flex-column align-items-center justify-content-center">
+        <div
+          class="col-md-12 col-lg-4 d-flex flex-column align-items-center justify-content-center"
+        >
           <p class="mt-2 text-center text-light">{{ dadosArma.nome }}</p>
           <img :src="dadosArma.img" :alt="dadosArma.nome + 'Foto'" class="w-75 mt-2 mb-2" />
           <div class="row w-100 mt-2">
@@ -90,9 +94,9 @@ export default {
         </div>
 
         <!-- Parte dos detalhes -->
-        <div class="col-md-12 col-lg-8  p-0 d-flex">
+        <div class="col-md-12 col-lg-8 p-0 d-flex">
           <div
-            class="col-lg-2 row-md  d-flex flex-lg-column align-items-center justify-content-center pt-4 pb-4 gap-3 p-2 h-100"
+            class="col-lg-2 row-md d-flex flex-lg-column align-items-center justify-content-center pt-4 pb-4 gap-3 p-2 h-100"
           >
             <button
               type="button"
@@ -130,13 +134,12 @@ export default {
               <h4 class="text-light col-12 text-center pt-3 pb-3">
                 Status da {{ dadosArma.nome }}
               </h4>
-              <StatusArma
-                :dadosArma="statusArma"
-              />
+              <StatusArma :dadosArma="statusArma" />
             </div>
 
             <div v-if="menuDetalhes == 'skins'">
               <h4 class="text-light col-12 text-center pt-3">Skins</h4>
+              <SkinsArma :skins="skinsArma" />
             </div>
           </div>
         </div>
