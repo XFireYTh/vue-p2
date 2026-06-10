@@ -13,7 +13,7 @@ export default {
       statusLoja: {},
       skinsArma: {},
       skindefault: {},
-      menuDetalhes: 'status',
+      menuDetalhes: 'skins',
     }
   },
   components: {
@@ -108,14 +108,6 @@ export default {
             </button>
             <button
               type="button"
-              v-if="statusLoja"
-              @click="menuDetalhes = 'loja'"
-              class="btn btn-outline-light border-0 col-8 p-2"
-            >
-              Loja
-            </button>
-            <button
-              type="button"
               @click="menuDetalhes = 'skins'"
               class="btn btn-outline-light border-0 col-8 p-2"
             >
@@ -124,11 +116,6 @@ export default {
           </div>
 
           <div class="col-lg-10 col-md-12 mb-3">
-            <div v-if="menuDetalhes == 'loja'">
-              <div class="row">
-                <h4 class="text-light col-12 text-center pt-3">Status da Loja</h4>
-              </div>
-            </div>
 
             <div v-if="menuDetalhes == 'status' && statusArma">
               <h4 class="text-light col-12 text-center pt-3 pb-3">
@@ -156,7 +143,7 @@ export default {
       </div>
     </div>
 
-    <div class="container d-flex justify-content-center mt-5 mb-5">
+    <div class="w-100 d-flex justify-content-center mt-5 mb-5">
       <a href="/armas" class="btn btn-outline-light">Voltar</a>
     </div>
   </div>

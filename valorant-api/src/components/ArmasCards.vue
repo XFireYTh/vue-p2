@@ -40,7 +40,7 @@ export default {
           :key="index"
         >
           <img :src="arma.disp" :alt="arma.nome + 'Foto'" class="card-img" />
-          <div class="card-img-overlay d-flex align-items-center justify-content-center">
+          <div class="card-img-overlay d-flex align-items-center justify-content-center bg-dark bg-opacity-50">
             <p class="card-title text-white text-center">{{ arma.nome }}</p>
           </div>
         </a>
